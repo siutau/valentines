@@ -166,8 +166,8 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            ¡Gracias por aceptar, te amo! ❤️
-            <p className='text-sm mt-4'>¡Hoy toca pisada de nuca! 🥵</p>
+            ¡Gracias por aceptar, te amo!
+            <p className='text-sm mt-4'>You're my wonderwall ❤️</p>
             <img
               src='/hamster_jumping.gif'
               alt='Hamster Feliz'
