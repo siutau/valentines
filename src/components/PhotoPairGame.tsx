@@ -94,7 +94,7 @@ export default function PhotoPairGame({
   }, [matched, handleShowProposal])
 
   return (
-    <div className='grid grid-cols-9 gap-1 lg:gap-2 max-w-[95vw] mx-auto place-items-center'>
+    <div className='grid grid-cols-9 gap-1 lg:gap-2 max-w-[95vw] mx-auto place-items-center user-select-none'>
       {/* Image preload */}
       <div className='hidden'>
         {images.map((image, i) => (
@@ -102,7 +102,7 @@ export default function PhotoPairGame({
             key={i}
             src={image}
             alt={`Image ${i + 1}`}
-            className='object-cover w-full h-full'
+            className='object-cover w-full h-full user-select-none'
           />
         ))}
       </div>
@@ -111,7 +111,7 @@ export default function PhotoPairGame({
         index !== null ? (
           <motion.div
             key={i}
-            className='w-[11vh] h-[11vh] lg:w-20 lg:h-20 relative cursor-pointer'
+            className='w-[11vh] h-[11vh] lg:w-20 lg:h-20 relative cursor-pointer user-select-none'
             whileHover={{ scale: 1.1 }}
             onClick={() => handleClick(index)}
             style={{ perspective: '1000px' }} // Add perspective for 3D effect
@@ -119,7 +119,7 @@ export default function PhotoPairGame({
             {/* Back of the card */}
             {!selected.includes(index) && !matched.includes(index) && (
               <motion.div
-                className='w-full h-full bg-gray-300 rounded-sm lg:rounded-md absolute z-10'
+                className='w-full h-full bg-red-500 rounded-sm lg:rounded-md absolute z-10 user-select-none'
                 initial={{ rotateY: 0 }}
                 animate={{
                   rotateY:
@@ -135,7 +135,7 @@ export default function PhotoPairGame({
             {/* Front of the card (image) */}
             {(selected.includes(index) || matched.includes(index)) && (
               <motion.div
-                className='w-full h-full absolute'
+                className='w-full h-full absolute user-select-none'
                 initial={{ rotateY: -180 }}
                 animate={{ rotateY: 0 }}
                 transition={{ duration: 0.5 }}
@@ -144,7 +144,7 @@ export default function PhotoPairGame({
                 <img
                   src={images[index]}
                   alt={`Imagen ${index + 1}`}
-                  className='rounded-sm lg:rounded-md object-cover w-full h-full'
+                  className='rounded-sm lg:rounded-md object-cover w-full h-full user-select-none'
                 />
               </motion.div>
             )}
@@ -152,16 +152,19 @@ export default function PhotoPairGame({
             {/* Incorrect animation */}
             {incorrect.includes(index) && (
               <motion.div
-                className='absolute inset-0'
+                className='absolute inset-0 user-select-none'
                 animate={{ scale: [1, 1.1, 1], opacity: [1, 0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <div className='w-full h-full bg-red-500 rounded-sm lg:rounded-md'></div>
+                <div className='w-full h-full bg-red-500 rounded-sm lg:rounded-md user-select-none'></div>
               </motion.div>
             )}
           </motion.div>
         ) : (
-          <div key={i} className='w-[11vh] h-[11vh] lg:w-20 lg:h-20' />
+          <div
+            key={i}
+            className='w-[11vh] h-[11vh] lg:w-20 lg:h-20 user-select-none'
+          />
         ),
       )}
     </div>

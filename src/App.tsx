@@ -28,9 +28,9 @@ export default function App() {
             className='flex flex-col items-center'
           >
             <h1 className='text-white text-center text-2xl lg:text-3xl font-semibold leading-tight mb-20'>
-              Encuentra <span className='text-gray-400'>los pares</span>
+              Encuentra <span className='text-rose-300'>los pares</span>
               <br />
-              <span className='text-gray-400'>para revelar</span> la sorpresa
+              <span className='text-rose-300'>para revelar</span> la sorpresa
             </h1>
             <PhotoPairGame handleShowProposal={handleShowProposal} />
           </motion.div>

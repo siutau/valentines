@@ -94,7 +94,7 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Tengo una sorpresa para ti!
+            ¡Tengo una sorpresa para ti!
           </motion.h2>
         )}
         {step === 2 && (
@@ -119,17 +119,18 @@ export default function ValentinesProposal() {
               ))}
             </div>
 
-            <div className='flex flex-col items-center z-10'>
+            <div className='text-center z-10'>
               <h2 className={`text-5xl font-semibold mb-8`}>
-                Will you be my Valentine?
+                ¿Quieres ser mi San Valentín?
               </h2>
               <img
+                className='mx-auto mb-8'
                 src='/sad_hamster.png'
                 alt='Sad Hamster'
                 width={200}
                 height={200}
               />
-              <div className='flex space-x-4 mt-10'>
+              <div className='grid grid-cols-2 gap-4'>
                 <button
                   className='px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl hover:from-pink-600 hover:to-rose-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'
                   onClick={handleYesClick}
@@ -166,7 +167,7 @@ export default function ValentinesProposal() {
             exit={{ opacity: 0 }}
           >
             ¡Gracias por aceptar, te amo! 💕
-            <p className='text-sm mt-4'>¡Hoy toca pisado de nuca! 💌</p>
+            <p className='text-sm mt-4'>¡Hoy toca pisada de nuca! 💌</p>
             <img
               src='/hamster_jumping.gif'
               alt='Hamster Feliz'
