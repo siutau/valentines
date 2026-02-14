@@ -27,14 +27,12 @@ export default function App() {
             transition={{ duration: ANIM_DURATION }}
             className='flex flex-col items-center'
           >
-            <h1 className='text-white text-4xl lg:text-5xl font-semibold leading-tight py-20'>
-              <span className='text-gray-400'>Encuentra</span> <br /> los pares
+            <h1 className='text-white text-center text-2xl lg:text-3xl font-semibold leading-tight mb-20'>
+              Encuentra <span className='text-gray-400'>los pares</span>
+              <br />
+              <span className='text-gray-400'>para revelar</span> la sorpresa
             </h1>
             <PhotoPairGame handleShowProposal={handleShowProposal} />
-            <h2 className='text-white text-2xl lg:text-3xl font-semibold leading-tight text-right py-20'>
-              para revelar <br />{' '}
-              <span className='text-gray-400'>la sorpresa</span>
-            </h2>
           </motion.div>
         ) : (
           <motion.div
