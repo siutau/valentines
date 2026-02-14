@@ -20,7 +20,7 @@ export default function App() {
   return (
     <OrientationGuard>
       <main className='flex items-center justify-center min-h-screen bg-black overflow-hidden relative'>
-        {showValentinesProposal ? (
+        {!showValentinesProposal ? (
           <motion.div
             initial={{ opacity: 1 }}
             animate={{ opacity: isTransitioning ? 0 : 1 }}
